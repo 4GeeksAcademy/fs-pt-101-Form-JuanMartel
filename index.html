@@ -12,36 +12,39 @@
     <div class="row mb-3 bg-light text-dark mt-3 border border-2 rounded""> 
             <h2> Payment form example </h2>
     </div>
-    <div class="col-12 bg-danger p-2 text-muted bg-opacity-25 border border-2 rounded" ><strong>  Some fields are missing </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-12 bg-danger p-2 text-muted bg-opacity-25 border border-2 rounded" ><strong>  Some fields are missing </strong> 
     </div>
     
     
-    
-    <form class="mt-3 d-flex justify-content-between "> 
+    <form class="mt-3 d-flex justify-content-between"> 
 
-        <div class="col-4 d-flex flex-column rounded  "> 
-        <label class="d-flex rounded" for="number"> Card #</label>
-        <input class="border-secondary-subtle rounded" type="number" placeholder="XXXXXXXXXXXXXXXX"/> 
-        </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <label for="cvc" class="form-label">Card</label>
+        <input type="password" class="form-control" id="cvc" placeholder="000">
+    </div>
 
-        <div class="col-3 d-flex flex-column  border-secondary-subtle"> 
-        <label class="rounded" for="number"> CVC #</label>
-        <input class="border-secondary-subtle rounded" type="number" placeholder="0000"/> 
-        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <label for="cvc" class="form-label">CVC#</label>
+          <input type="password" class="form-control" id="cvc" placeholder="000">
+      </div>
 
-        <div class="col-4 d-flex flex-column"> 
-            <label for="number"> Amount </label>
-            <input class="border-secondary-subtle rounded" type="number" placeholder="$"/> 
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <label for="inputPassword4" class="form-label">Amount</label>
+        <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="Amount"
+                pattern="[0-9]*" title="Escribe sólo números" required>
         </div>
+    </div>
     </form> 
     
 <form class="row g-3 mt-2">
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <label for="validationDefault01" class="form-label">First name</label>
       <input type="text" class="form-control" id="validationDefault01" value="" required>
     </div>
 
-    <div class="col-6">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <label for="validationDefault02" class="form-label">Last name</label>
       <input type="text" class="form-control" id="validationDefault02" value="" required>
     </div>
@@ -49,22 +52,33 @@
 
 <form>
 <div class="row mt-3"> 
-    <div class="col-6">
-      <label for="validationDefault03" class="form-label">City</label>
-      <input type="text" class="form-control" id="validationDefault03" required>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" required>
     </div>
 
-    <div class="col-3">
-      <label for="validationDefault04" class="form-label">State</label>
-      <select class="form-select" id="validationDefault04" required>
-        <option selected disabled value="">Pick a state</option>
-        <option>...</option>
-      </select>
-    </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <label for="state" class="form-label">State</label>
+        <select class="form-select" id="state" required>
+          <option selected disabled value="">Pick a state</option>
+          <option>Andalucía</option>
+          <option>Aragón</option>
+          <option>Barcelona</option>
+          <option>Islas Baleares</option>
+          <option>Canarias</option>
+          <option>Comunidad Valenciana</option>
+          <option>Extremadura</option>
+          <option>Galicia</option>
+          <option>País Vasco</option>
+          <option>Principado de Asturias</option>
+          <option>La Rioja</option>
 
-    <div class="col-3 d-flex flex-column">
-      <label for="validationDefault05" class="form-label">Postal Code</label>
-      <input type="number" class="form-control" id="validationDefault05" required>
+        </select> 
+      </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+      <label for="postalCode" class="form-label">Postal Code</label>
+      <input type="text" class="form-control" id="postalCode" required>
     </div>
 </div>  
 </form>
@@ -72,7 +86,7 @@
 
 
 <div class="row mt-3 d-flex flex-row justify-content-between">
-  <div class="col-3"> 
+  <div class="col-sm-12 col-md-6 col-lg-4"> 
   <p> We accept: </p>
   <div class="container p-3 mb-2 bg-secondary text-white d-flex flex-row me-3  rounded">
         <form class="d-flex flex-row"> 
@@ -96,7 +110,7 @@
   </div>
   </div>
 
-<div class="col-6">
+<div class="col-sm-12 col-md-6 col-lg-4">
       <p class="d-flex flex-row"> Message </p>
   <div class="form-floating">
         <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
